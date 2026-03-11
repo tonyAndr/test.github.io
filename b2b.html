@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B2B Dashboard (Preview)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-slate-50 text-slate-900">
+    <div class="min-h-screen">
+      <div class="flex min-h-screen">
+        <!-- LEFT PANEL / NAV -->
+        <aside class="hidden w-64 flex-col border-r border-slate-200 bg-white md:flex">
+          <div class="border-b border-slate-200 p-4">
+            <div class="text-sm font-semibold">Nexus · B2B</div>
+            <div class="text-xs text-slate-500">Acme Inc</div>
+          </div>
+          <nav class="flex-1 p-2">
+            <a class="flex items-center gap-2 rounded-lg bg-slate-100 px-3 py-2 text-sm font-medium" href="#">
+              <span class="inline-flex h-5 w-5 items-center justify-center rounded bg-slate-900 text-white">D</span>
+              Dashboard
+            </a>
+            <a class="mt-1 flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50" href="#">
+              <span class="inline-flex h-5 w-5 items-center justify-center rounded bg-slate-200">E</span>
+              Employees
+            </a>
+            <a class="mt-1 flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50" href="#">
+              <span class="inline-flex h-5 w-5 items-center justify-center rounded bg-slate-200">C</span>
+              Company / Plan
+            </a>
+          </nav>
+          <div class="border-t border-slate-200 p-3">
+            <div class="flex items-center gap-3 rounded-lg px-2 py-2 hover:bg-slate-50">
+              <div class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold text-white">IM</div>
+              <div class="min-w-0">
+                <div class="truncate text-sm font-medium">Iskren Mitov</div>
+                <div class="truncate text-xs text-slate-500">Admin</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="flex-1">
+          <div class="mx-auto max-w-6xl p-4 md:p-8">
+            <div>
+              <div class="text-2xl font-semibold">Dashboard</div>
+              <div class="text-sm text-slate-500">Global snapshot of how the company is doing</div>
+            </div>
+            
+            <iframe src="https://wistful-buffer-587.notion.site/ebd//320bd3bd193b814cbf74d74c34a8003c" width="100%" height="600" frameborder="0" allowfullscreen />
+
+            <!-- KPI cards -->
+            <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <div class="rounded-xl border border-slate-200 bg-white p-4" title="Employees currently in the company (proxy for seats used)">
+                <div class="text-xs text-slate-500">Employees with access</div>
+                <div class="mt-1 text-2xl font-semibold">124</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-white p-4" title="Employees with at least 1 learning activity in the last 7 days">
+                <div class="text-xs text-slate-500">Active (7d)</div>
+                <div class="mt-1 text-2xl font-semibold">48</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-white p-4" title="Employees with at least 1 learning activity in the last 30 days">
+                <div class="text-xs text-slate-500">Active (30d)</div>
+                <div class="mt-1 text-2xl font-semibold">77</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-white p-4" title="Employees started but inactive for > X days">
+                <div class="text-xs text-slate-500">At risk</div>
+                <div class="mt-1 text-2xl font-semibold">12</div>
+              </div>
+            </div>
+
+            <!-- Charts row (placeholders) -->
+            <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div class="rounded-xl border border-slate-200 bg-white p-4">
+                <div class="text-base font-semibold">Active over time</div>
+                <div class="mt-2 h-44 rounded-lg bg-slate-100"></div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-white p-4">
+                <div class="text-base font-semibold">Learning minutes over time</div>
+                <div class="mt-2 h-44 rounded-lg bg-slate-100"></div>
+              </div>
+            </div>
+
+            <!-- Attention lists -->
+            <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div class="rounded-xl border border-slate-200 bg-white p-4">
+                <div class="text-base font-semibold">Progress distribution</div>
+                <div class="mt-2 h-32 rounded-lg bg-slate-100"></div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-white p-4">
+                <div class="text-base font-semibold">Needs attention</div>
+                <div class="mt-2 space-y-2">
+                  <div class="rounded-lg border border-slate-200 p-3">
+                    <div class="font-medium">Not invited</div>
+                    <div class="text-sm text-slate-500">19 employees</div>
+                  </div>
+                  <div class="rounded-lg border border-slate-200 p-3">
+                    <div class="font-medium">Not started</div>
+                    <div class="text-sm text-slate-500">31 employees</div>
+                  </div>
+                  <div class="rounded-lg border border-slate-200 p-3">
+                    <div class="font-medium">Low satisfaction</div>
+                    <div class="text-sm text-slate-500">4 employees</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
